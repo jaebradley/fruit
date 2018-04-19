@@ -1,0 +1,23 @@
+{
+  "name": "@jaebradley/fruit",
+  "version": "0.0.0-development",
+  "description": "An opinionated rollup.js starting package generator",
+  "main": "build/index.js",
+  "scripts": {
+    "test": "jest src/ --coverage --passWithNoTests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaebradley/fruit.git"
+  },
+  "keywords": [
+    "rollup",
+    "cli"
+  ],
+  "author": "jae.b.bradley@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jaebradley/fruit/issues"
+  },
+  "homepage": "https://github.com/jaebradley/fruit#readme"
+}
