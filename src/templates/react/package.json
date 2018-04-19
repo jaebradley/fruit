@@ -1,5 +1,11 @@
 {
+  "scripts": {
+    "deploy": "",
+    "lint": "eslint --ext .js,.jsx ."
+  },
   "devDependencies": {
+    "autoprefixer": "^8.2.0",
+    "enzyme": "^3.3.0",
     "node-sass": "^4.8.3",
     "postcss": "^6.0.21",
     "rollup-plugin-postcss": "^1.5.1",

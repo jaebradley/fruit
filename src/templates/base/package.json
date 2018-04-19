@@ -1,29 +1,25 @@
 {
-  "name": "@jaebradley/fruit",
-  "version": "0.0.0-development",
-  "description": "An opinionated rollup.js starting package generator",
-  "main": "build/index.js",
-  "scripts": {
-    "test": "jest src/ --coverage --passWithNoTests"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jaebradley/fruit.git"
-  },
-  "keywords": [
-    "rollup",
-    "cli"
+  "name": {{name}},
+  "version": {{version}},
+  "description": {{description}},
+  "author": {{author}},
+  "main": "build/index.cjs.js",
+  "module": "build/index.esm.js",
+  "browser": "build/index.js",
+  "files": [
+    "build"
   ],
-  "author": "jae.b.bradley@gmail.com",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/jaebradley/fruit/issues"
+  "scripts": {
+    "build": "BABEL_ENV=production rollup -c",
+    "codecov": "codecov",
+    "test": "BABEL_ENV=test jest src/ --coverage --no-cache",
+    "prepare": "npm run build"
   },
-  "homepage": "https://github.com/jaebradley/fruit#readme",
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.42",
     "@babel/core": "^7.0.0-beta.42",
     "@babel/preset-env": "^7.0.0-beta.42",
+    "babel-core": "^7.0.0-bridge.0",
     "codecov": "^3.0.0",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
@@ -39,14 +35,5 @@
     "rollup-plugin-filesize": "^1.5.0",
     "rollup-plugin-local-resolve": "^1.0.7",
     "rollup-plugin-node-resolve": "^3.3.0"
-  },
-  "dependencies": {
-    "@babel/runtime": "^7.0.0-beta.42",
-    "child-process-promise": "^2.2.1",
-    "commander": "^2.15.1",
-    "fs-extra": "^5.0.0",
-    "inquirer": "^5.1.0",
-    "isemail": "^3.1.1",
-    "untildify": "^3.0.2"
   }
 }

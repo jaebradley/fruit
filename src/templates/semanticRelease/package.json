@@ -1,4 +1,9 @@
 {
+  "scripts": {
+    "deploy": "npm run travis-deploy-once 'npm run semantic-release'",
+    "semantic-release": "semantic-release",
+    "travis-deploy-once": "travis-deploy-once"
+  },
   "devDependencies": {
     "semantic-release": "^15.1.4",
     "travis-deploy-once": "^4.4.1"

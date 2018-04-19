@@ -1,0 +1,10 @@
+{
+  "style": "build/index.css",
+  "scripts": {
+    "deploy": "",
+    "lint": "eslint --ext .js ."
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
