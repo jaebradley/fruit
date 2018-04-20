@@ -5,7 +5,7 @@
     "travis-deploy-once": "travis-deploy-once"
   },
   "devDependencies": {
-    "semantic-release": "^15.1.4",
+    "semantic-release": "^15.1.7",
     "travis-deploy-once": "^4.4.1"
   }
 }
