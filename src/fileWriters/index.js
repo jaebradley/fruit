@@ -6,7 +6,7 @@ const writeBaseTemplates = async ({ destination, templateValues }) =>
   writeTemplateDirectoryFiles({
     destination,
     templateValues,
-    location: path.join(__dirname, '../templates/base'),
+    location: path.join(__dirname, '../templates/core'),
   });
 
 const writeCommitlintTemplates = async ({ destination }) =>
