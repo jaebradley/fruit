@@ -5,9 +5,9 @@ cache:
 notifications:
   email: true
 node_js:
-  - '8'
+  - '8.9.3'
 before_install:
-  - npm install -g npm@5
+  - npm install -g npm@5.6.0
   - npm install -g greenkeeper-lockfile@1
 jobs:
   include:
@@ -20,5 +20,4 @@ jobs:
       after_script: greenkeeper-lockfile-upload
     - stage: deploy
       if: branch = master
-      before_script: npm run build
       script: npm run deploy
