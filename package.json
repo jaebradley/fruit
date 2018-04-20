@@ -13,7 +13,7 @@
     "deploy": "npm run travis-deploy-once 'npm run semantic-release'",
     "lint": "eslint --ext .js .",
     "test": "jest src/ --coverage --passWithNoTests",
-    "prepublishOnly": "npm run build",
+    "prepare": "npm run build",
     "semantic-commit": "commit",
     "semantic-release": "semantic-release",
     "travis-deploy-once": "travis-deploy-once"
