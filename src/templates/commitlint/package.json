@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "commitmsg": "commitlint -e $GIT_PARAMS",
+    "gc": "commit"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^6.1.3",
+    "@commitlint/config-angular": "^6.1.3",
+    "@commitlint/prompt": "^6.1.3",
+    "@commitlint/prompt-cli": "^6.1.3",
+    "husky": "^0.14.3"
+  }
+}

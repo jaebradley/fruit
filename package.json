@@ -3,8 +3,18 @@
   "version": "0.0.0-development",
   "description": "An opinionated rollup.js starting package generator",
   "main": "build/index.js",
+  "bin": {
+    "fruit": "build/index.js"
+  },
   "scripts": {
-    "test": "jest src/ --coverage --passWithNoTests"
+    "build": "babel src/ --ignore src/templates -d build/ --delete-dir-on-start --copy-files --include-dotfiles",
+    "codecov": "codecov",
+    "commitmsg": "commitlint -e $GIT_PARAMS",
+    "lint": "eslint --ext .js .",
+    "test": "jest src/ --coverage --passWithNoTests",
+    "semantic-commit": "commit",
+    "semantic-release": "semantic-release",
+    "travis-deploy-once": "travis-deploy-once"
   },
   "repository": {
     "type": "git",
@@ -15,9 +25,53 @@
     "cli"
   ],
   "author": "jae.b.bradley@gmail.com",
+  "publishConfig": {
+    "access": "public"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/jaebradley/fruit/issues"
   },
-  "homepage": "https://github.com/jaebradley/fruit#readme"
+  "homepage": "https://github.com/jaebradley/fruit#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.42",
+    "@babel/core": "^7.0.0-beta.42",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.42",
+    "@babel/plugin-transform-async-to-generator": "^7.0.0-beta.42",
+    "@babel/plugin-transform-runtime": "^7.0.0-beta.42",
+    "@babel/preset-env": "^7.0.0-beta.42",
+    "@commitlint/cli": "^6.1.3",
+    "@commitlint/config-angular": "^6.1.3",
+    "@commitlint/prompt": "^6.1.3",
+    "@commitlint/prompt-cli": "^6.1.3",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^22.4.3",
+    "codecov": "^3.0.0",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0",
+    "husky": "^0.14.3",
+    "jest": "^22.4.3",
+    "semantic-release": "^15.1.4",
+    "travis-deploy-once": "^4.4.1"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.0.0-beta.42",
+    "child-process-promise": "^2.2.1",
+    "commander": "^2.15.1",
+    "deepmerge": "^2.1.0",
+    "email-validator": "^2.0.3",
+    "fs-extra": "^5.0.0",
+    "globby": "^8.0.1",
+    "inquirer": "^5.1.0",
+    "is-json": "^2.0.1",
+    "is-semver": "^1.0.8",
+    "mustache": "^2.3.0",
+    "normalize-package-data": "^2.4.0",
+    "sort-package-json": "^1.12.0",
+    "untildify": "^3.0.2",
+    "validate-npm-package-name": "^3.0.0"
+  }
 }
