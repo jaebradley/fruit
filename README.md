@@ -4,7 +4,9 @@
 [![npm](https://img.shields.io/npm/dt/@jaebradley/fruit.svg)](https://www.npmjs.com/package/@jaebradley/fruit)
 [![npm](https://img.shields.io/npm/v/@jaebradley/fruit.svg)](https://www.npmjs.com/package/@jaebradley/fruit)
 
-Build your [`rollup.js`](https://rollupjs.org/guide) library boilerplate in seconds. Has opinions, mostly mine.
+Build your [`rollup.js`](https://rollupjs.org/guide) library boilerplate in seconds.
+
+Has opinions, mostly mine.
 
 ## Introduction
 
@@ -14,7 +16,7 @@ It seems like [the general consensus](https://medium.com/webpack/webpack-and-rol
 
 However, there is a decent amount of boilerplate associated with configuration (`.eslintrc`, `travis.yml`, `.babelrc`, `jest`, etc.) for building `rollup.js` libraries (and `webpack` applications as well).
 
-`fruit` aims to generate `rollup.js` library boilerplate using configuration options that I like so that you can start building your library right away.
+`fruit` aims to generate `rollup.js` library boilerplate (using some configuration options that I like) so that you can start building your library right away.
 
 ## Installation
 
@@ -58,7 +60,7 @@ Both come with
   * Run tests by executing `npm run test`
 * `rollup` (duh)
   * [`rollup-plugin-babel`](https://www.npmjs.com/package/rollup-plugin-babel)
-  * [`rollup-plugin-babel-minify`])(https://www.npmjs.com/package/rollup-plugin-babel)
+  * [`rollup-plugin-babel-minify`](https://www.npmjs.com/package/rollup-plugin-babel)
   * [`rollup-plugin-commonjs`](https://www.npmjs.com/package/rollup-plugin-commonjs)
   * [`rollup-plugin-filesize`](https://www.npmjs.com/package/rollup-plugin-filesize)
   * [`rollup-plugin-local-resolve`](https://www.npmjs.com/package/rollup-plugin-local-resolve)
