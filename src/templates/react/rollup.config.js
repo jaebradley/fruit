@@ -14,12 +14,16 @@ const config = {
     {
       file: 'build/index.js',
       format: 'umd',
-      name: {{name}},
+      name: "{{packageName}}",
+      globals: {
+        react: 'React',
+        'prop-types': 'PropTypes',
+      },
     },
     {
       file: 'build/index.cjs.js',
       format: 'cjs',
-      name: {{name}},
+      name: "{{packageName}}",
     },
     {
       file: 'build/index.esm.js',

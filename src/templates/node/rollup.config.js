@@ -11,12 +11,12 @@ const config = {
     {
       file: 'build/index.js',
       format: 'umd',
-      name: {{name}},
+      name: "{{packageName}}",
     },
     {
       file: 'build/index.cjs.js',
       format: 'cjs',
-      name: {{name}},
+      name: "{{packageName}}",
     },
     {
       file: 'build/index.esm.js',

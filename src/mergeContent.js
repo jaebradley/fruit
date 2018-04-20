@@ -3,7 +3,11 @@ import deepMerge from 'deepmerge';
 
 const mergeContent = ({ originalContent, additionalContent }) => {
   if (isJSON(additionalContent) && isJSON(originalContent)) {
-    return JSON.stringify(deepMerge.merge(JSON.parse(originalContent), JSON.parse(additionalContent)));
+    const mergedContent = deepMerge(
+      JSON.parse(originalContent),
+      JSON.parse(additionalContent),
+    );
+    return JSON.stringify(mergedContent, null, 2);
   }
 
   return `${originalContent}\n${additionalContent}`.trim();

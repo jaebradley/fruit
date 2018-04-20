@@ -8,7 +8,7 @@ const writeTemplateDirectoryFiles = async ({ location, destination, templateValu
   files.forEach(async (file) => {
     const relativeFilePath = path.relative(location, file);
     const destinationFilePath = path.join(destination, relativeFilePath);
-    await writeTemplateFile({
+    writeTemplateFile({
       templateValues,
       location: file,
       destination: destinationFilePath,

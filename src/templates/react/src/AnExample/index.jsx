@@ -10,7 +10,7 @@ AnExample.propTypes = {
 };
 
 AnExample.defaultProps = {
-  name: 'An Example',
+  name: 'jaebaebae',
 };
 
 export default AnExample;

@@ -1,8 +1,8 @@
 {
-  "name": {{packageName}},
-  "version": {{packageVersion}},
-  "description": {{packageDescription}},
-  "author": {{packageAuthor}},
+  "name": "{{packageName}}",
+  "version": "{{packageVersion}}",
+  "description": "{{packageDescription}}",
+  "author": "{{packageAuthor}}",
   "main": "build/index.cjs.js",
   "module": "build/index.esm.js",
   "browser": "build/index.js",
@@ -15,6 +15,18 @@
     "test": "BABEL_ENV=test jest src/ --coverage --no-cache",
     "prepare": "npm run build"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/{{gitHubUsername}}/{{packageName}}.git"
+  },
+  "keywords": [],
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/{{gitHubUsername}}/{{packageName}}/issues"
+  },
+  "homepage": "https://github.com/{{gitHubUsername}}/{{packageName}}#readme",
+  "readme": "https://github.com/{{gitHubUsername}}/{{packageName}}#readme",
+  "dependencies": {},
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.42",
     "@babel/core": "^7.0.0-beta.42",
