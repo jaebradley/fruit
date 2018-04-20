@@ -17,6 +17,9 @@ const writeTemplateDirectoryFiles = async ({ location, destination, templateValu
     // so I have to change the name to package.template.json
     if (file.indexOf('package.template.json') >= 0) {
       destinationFilePath = path.join(destination, 'package.json');
+    // if I don't template .npmignore they'll get respected and things will actually get ignore :(
+    } else if (file.indexOf('.npmignore-template') >= 0) {
+      destinationFilePath = path.join(destination, '.npmignore');
     }
 
     writeTemplateFile({
