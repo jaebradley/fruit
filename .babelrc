@@ -6,5 +6,10 @@
     "@babel/transform-runtime",
     "@babel/transform-async-to-generator",
     "@babel/plugin-proposal-object-rest-spread"
+  ],
+  "ignore":[
+    "node_modules/**",
+    "*.test.js",
+    "src/templates/**"
   ]
 }

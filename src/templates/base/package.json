@@ -1,8 +1,8 @@
 {
-  "name": {{name}},
-  "version": {{version}},
-  "description": {{description}},
-  "author": {{author}},
+  "name": {{packageName}},
+  "version": {{packageVersion}},
+  "description": {{packageDescription}},
+  "author": {{packageAuthor}},
   "main": "build/index.cjs.js",
   "module": "build/index.esm.js",
   "browser": "build/index.js",
