@@ -10,6 +10,7 @@
     "build": "babel src/ --ignore src/templates -d build/ --delete-dir-on-start --copy-files --include-dotfiles",
     "codecov": "codecov",
     "commitmsg": "commitlint -e $GIT_PARAMS",
+    "deploy": "npm run travis-deploy-once 'npm run semantic-release'",
     "lint": "eslint --ext .js .",
     "test": "jest src/ --coverage --passWithNoTests",
     "semantic-commit": "commit",
