@@ -7,7 +7,7 @@
     "fruit": "build/index.js"
   },
   "scripts": {
-    "build": "babel src/ --ignore src/templates -d build/ --delete-dir-on-start --copy-files --include-dotfiles",
+    "build": "rm -rf build/ && babel src/ --ignore src/templates -d build/ --delete-dir-on-start --copy-files --include-dotfiles",
     "codecov": "codecov",
     "commitmsg": "commitlint -e $GIT_PARAMS",
     "deploy": "npm run travis-deploy-once 'npm run semantic-release'",
