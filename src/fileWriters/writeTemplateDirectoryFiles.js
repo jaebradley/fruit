@@ -5,7 +5,7 @@ import writeTemplateFile from './writeTemplateFile';
 
 const writeTemplateDirectoryFiles = async ({ location, destination, templateValues = {} }) => {
   const files = await globby(location, { dot: true });
-  files.forEach(async (file) => {
+  files.forEach((file) => {
     const relativeFilePath = path.relative(location, file);
     const destinationFilePath = path.join(destination, relativeFilePath);
     writeTemplateFile({
