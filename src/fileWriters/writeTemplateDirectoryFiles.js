@@ -20,6 +20,8 @@ const writeTemplateDirectoryFiles = async ({ location, destination, templateValu
     // if I don't template .npmignore they'll get respected and things will actually get ignore :(
     } else if (file.indexOf('.npmignore-template') >= 0) {
       destinationFilePath = path.join(destination, '.npmignore');
+    } else if (file.indexOf('.gitignore-template') >= 0) {
+      destinationFilePath = path.join(destination, '.gitignore');
     }
 
     writeTemplateFile({
