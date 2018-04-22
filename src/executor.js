@@ -4,6 +4,11 @@ import { spawn } from 'child_process';
 import normalizePackageData from 'normalize-package-data';
 import sortPackageJSON from 'sort-package-json';
 
+import {
+  PACKAGE_TYPES,
+  PACKAGE_FEATURES,
+} from './constants';
+
 import prompts from './prompts';
 import {
   writeBaseTemplates,
@@ -34,10 +39,10 @@ const executor = async () => {
     packageAuthor: authorEmailAddress,
   });
 
-  const isSemanticRelease = packageFeatures.indexOf('semantic-release') >= 0;
-  const isCommitLint = packageFeatures.indexOf('commitlint') >= 0;
-  const isNode = packageType === 'Node';
-  const isReact = packageType === 'React';
+  const isSemanticRelease = packageFeatures.indexOf(PACKAGE_FEATURES.SEMANTIC_RELEASE) >= 0;
+  const isCommitLint = packageFeatures.indexOf(PACKAGE_FEATURES.COMMITLINT) >= 0;
+  const isNode = packageType === PACKAGE_TYPES.NODE;
+  const isReact = packageType === PACKAGE_TYPES.REACT;
 
   await writeBaseTemplates({
     templateValues,
