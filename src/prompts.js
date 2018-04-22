@@ -7,7 +7,7 @@ const prompts = async () => (
   inquirer.prompt([
     {
       name: 'packageType',
-      message: 'Package Type',
+      message: 'Select a package type',
       type: 'list',
       choices: [
         'Node',
@@ -16,7 +16,7 @@ const prompts = async () => (
     },
     {
       name: 'packageFeatures',
-      message: 'Package Features',
+      message: 'Select package Features',
       type: 'checkbox',
       choices: [
         'commitlint',
@@ -25,25 +25,25 @@ const prompts = async () => (
     },
     {
       name: 'packageName',
-      message: 'Name of Package',
+      message: 'Input a package name',
       type: 'input',
       validate: packageName => validateNpmPackageName(packageName).validForNewPackages || `${packageName} is an invalid package name`,
     },
     {
       name: 'packageDescription',
-      message: 'Package description',
+      message: 'Input a package description',
       type: 'input',
       validate: answer => answer && answer.length > 0,
     },
     {
       name: 'packageVersion',
-      message: 'Package version',
+      message: 'Input an initial package version',
       type: 'input',
       validate: answer => isSemver(answer) || `${answer} is an invalid package version`,
     },
     {
       name: 'targetDirectory',
-      message: 'Where to create the package',
+      message: 'Input the relative package location',
       type: 'input',
       validate: answer => answer && answer.length > 0,
     },
@@ -55,7 +55,7 @@ const prompts = async () => (
     },
     {
       name: 'gitHubUsername',
-      message: 'Input your GitHub Username',
+      message: 'Input your GitHub username',
       type: 'input',
       validate: answer => answer && answer.length > 0,
     },
