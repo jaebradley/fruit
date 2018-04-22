@@ -3,6 +3,8 @@ import emailValidator from 'email-validator';
 import validateNpmPackageName from 'validate-npm-package-name';
 import isSemver from 'is-semver';
 
+import isGitHubUsernameValid from './isGitHubUsernameValid';
+
 const prompts = async () => (
   inquirer.prompt([
     {
@@ -57,7 +59,13 @@ const prompts = async () => (
       name: 'gitHubUsername',
       message: 'Input your GitHub Username',
       type: 'input',
-      validate: answer => answer && answer.length > 0,
+      validate: async (username) => {
+        if (await isGitHubUsernameValid(username)) {
+          return true;
+        }
+
+        return `${username} is an invalid GitHub username`;
+      },
     },
   ])
 );
