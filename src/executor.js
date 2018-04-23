@@ -3,6 +3,7 @@ import fse from 'fs-extra';
 import { spawn } from 'child_process';
 import normalizePackageData from 'normalize-package-data';
 import sortPackageJSON from 'sort-package-json';
+import isOnline from 'is-online';
 
 import {
   PACKAGE_TYPES,
@@ -19,6 +20,13 @@ import {
 } from './fileWriters';
 
 const executor = async () => {
+  const online = await isOnline();
+
+  if (!online) {
+    console.log("📡  You don't seem to be online 😞");
+    return;
+  }
+
   const {
     packageType,
     packageFeatures,
