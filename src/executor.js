@@ -1,6 +1,6 @@
 import untildify from 'untildify';
 import fse from 'fs-extra';
-import { spawn } from 'child_process';
+import { spawn } from 'child-process-promise';
 import normalizePackageData from 'normalize-package-data';
 import sortPackageJSON from 'sort-package-json';
 import isOnline from 'is-online';
@@ -92,8 +92,17 @@ const executor = async () => {
   normalizePackageData(packageJSON);
   fse.writeJsonSync(packageJSONLocation, sortPackageJSON(packageJSON), 'utf8');
 
+  console.log('⌛ 🤞 Installing packages');
   await spawn('npm', ['install'], { cwd: destinationDirectory, stdio: 'inherit' });
   await spawn('git', ['init'], { cwd: destinationDirectory, stdio: 'inherit' });
+
+  console.log('🥝  🍋  🍐  🍓  🍊  🍍  🍰  Installation complete! 🍒  🍈  🍇  🍉  🍏  🍎  🍌');
+  console.log('🔥  "npm run test" runs the jest tests');
+  console.log('🏗️  "npm run build" will build your modules');
+
+  if (isReact) {
+    console.log('📖  "npm run storybook" starts Storybook!');
+  }
 };
 
 export default executor;
