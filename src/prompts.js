@@ -4,6 +4,10 @@ import validateNpmPackageName from 'validate-npm-package-name';
 import isSemver from 'is-semver';
 
 import isGitHubUsernameValid from './isGitHubUsernameValid';
+import {
+  PACKAGE_TYPES,
+  PACKAGE_FEATURES,
+} from './constants';
 
 const prompts = async () => (
   inquirer.prompt([
@@ -12,8 +16,8 @@ const prompts = async () => (
       message: 'Package Type',
       type: 'list',
       choices: [
-        'Node',
-        'React',
+        PACKAGE_TYPES.NODE,
+        PACKAGE_TYPES.REACT,
       ],
     },
     {
@@ -21,8 +25,8 @@ const prompts = async () => (
       message: 'Package Features',
       type: 'checkbox',
       choices: [
-        'commitlint',
-        'semantic-release',
+        PACKAGE_FEATURES.COMMITLINT,
+        PACKAGE_FEATURES.SEMANTIC_RELEASE,
       ],
     },
     {
