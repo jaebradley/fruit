@@ -3,6 +3,12 @@ import fse from 'fs-extra';
 import { spawn, chdir } from 'child-process-promise';
 import normalizePackageData from 'normalize-package-data';
 import sortPackageJSON from 'sort-package-json';
+import isOnline from 'is-online';
+
+import {
+  PACKAGE_TYPES,
+  PACKAGE_FEATURES,
+} from './constants';
 
 import prompts from './prompts';
 import {
@@ -14,6 +20,13 @@ import {
 } from './fileWriters';
 
 const executor = async () => {
+  const online = await isOnline();
+
+  if (!online) {
+    console.log("📡  You don't seem to be online 😞");
+    return;
+  }
+
   const {
     packageType,
     packageFeatures,
@@ -34,10 +47,10 @@ const executor = async () => {
     packageAuthor: authorEmailAddress,
   });
 
-  const isSemanticRelease = packageFeatures.indexOf('semantic-release') >= 0;
-  const isCommitLint = packageFeatures.indexOf('commitlint') >= 0;
-  const isNode = packageType === 'Node';
-  const isReact = packageType === 'React';
+  const isSemanticRelease = packageFeatures.indexOf(PACKAGE_FEATURES.SEMANTIC_RELEASE) >= 0;
+  const isCommitLint = packageFeatures.indexOf(PACKAGE_FEATURES.COMMITLINT) >= 0;
+  const isNode = packageType === PACKAGE_TYPES.NODE;
+  const isReact = packageType === PACKAGE_TYPES.REACT;
 
   await writeBaseTemplates({
     templateValues,
