@@ -10,7 +10,7 @@ const mergeContent = ({ originalContent, additionalContent }) => {
     return JSON.stringify(mergedContent, null, 2);
   }
 
-  return `${originalContent}\n${additionalContent}`.trim();
+  return `${originalContent}\n${additionalContent}`;
 };
 
 export default mergeContent;
