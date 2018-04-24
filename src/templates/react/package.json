@@ -51,10 +51,8 @@
       "src/**/*.{js,jsx}"
     ],
     "coveragePathIgnorePatterns": [
-      "/node_modules/"
-    ],
-    "testPathIgnorePatterns": [
-      "*.stories.{js,jsx}"
+      "/node_modules/",
+      "(.stories)\\.(jsx)$"
     ]
   }
 }
