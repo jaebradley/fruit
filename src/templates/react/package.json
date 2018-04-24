@@ -5,11 +5,7 @@
     "lint": "eslint --ext .js,.jsx .",
     "storybook": "start-storybook -p 6006"
   },
-  "dependencies": {
-    "prop-types": "^15.6.1",
-    "react": "^16.3.1",
-    "react-dom": "^16.3.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@babel/preset-react": "^7.0.0-beta.44",
     "@storybook/addon-a11y": "^3.4.1",
@@ -26,6 +22,9 @@
     "identity-obj-proxy": "^3.0.0",
     "node-sass": "^4.8.3",
     "postcss": "^6.0.21",
+    "prop-types": "^15.6.1",
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1",
     "rollup-plugin-peer-deps-external": "^2.1.0",
     "rollup-plugin-postcss": "^1.5.1",
     "sass-loader": "^6.0.7",
@@ -52,10 +51,8 @@
       "src/**/*.{js,jsx}"
     ],
     "coveragePathIgnorePatterns": [
-      "/node_modules/"
-    ],
-    "testPathIgnorePatterns": [
-      "*.stories.{js,jsx}"
+      "/node_modules/",
+      "(.stories)\\.(jsx)$"
     ]
   }
 }

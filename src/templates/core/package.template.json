@@ -48,10 +48,13 @@
     "rollup-plugin-commonjs": "^9.1.0",
     "rollup-plugin-filesize": "^1.5.0",
     "rollup-plugin-local-resolve": "^1.0.7",
-    "rollup-plugin-node-resolve": "^3.3.0"
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-uglify":"^3.0.0"
   },
-  "testPathIgnorePatterns": [
-    "<rootDir>/build/",
-    "<rootDir>/node_modules/"
-  ]
+  "jest": {
+    "testPathIgnorePatterns": [
+      "<rootDir>/build/",
+      "<rootDir>/node_modules/"
+    ]
+  }
 }

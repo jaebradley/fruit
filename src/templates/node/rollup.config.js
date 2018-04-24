@@ -4,6 +4,9 @@ import resolve from 'rollup-plugin-node-resolve';
 import localResolve from 'rollup-plugin-local-resolve';
 import filesize from 'rollup-plugin-filesize';
 import minify from 'rollup-plugin-babel-minify';
+import globals from 'rollup-plugin-node-globals';
+import builtins from 'rollup-plugin-node-builtins';
+import uglify from 'rollup-plugin-uglify';
 
 const config = {
   input: 'src/index.js',
@@ -11,12 +14,12 @@ const config = {
     {
       file: 'build/index.js',
       format: 'umd',
-      name: "{{packageName}}",
+      name: '{{packageName}}',
     },
     {
       file: 'build/index.cjs.js',
       format: 'cjs',
-      name: "{{packageName}}",
+      name: '{{packageName}}',
     },
     {
       file: 'build/index.esm.js',
@@ -24,10 +27,20 @@ const config = {
     },
   ],
   plugins: [
+    globals(),
+    builtins(),
     babel({ exclude: 'node_modules/**' }),
-    minify(),
     localResolve(),
-    resolve(),
+    resolve({
+      module: true,
+      jsnext: true,
+      main: true,
+      preferBuiltins: true,
+      browser: true,
+      modulesOnly: true,
+    }),
+    minify(),
+    uglify(),
     commonjs(),
     filesize(),
   ],

@@ -6,7 +6,8 @@ import postcss from 'rollup-plugin-postcss';
 import filesize from 'rollup-plugin-filesize';
 import autoprefixer from 'autoprefixer';
 import localResolve from 'rollup-plugin-local-resolve';
-
+import uglify from 'rollup-plugin-uglify';
+import minify from 'rollup-plugin-babel-minify';
 
 const config = {
   input: 'src/index.js',
@@ -14,7 +15,7 @@ const config = {
     {
       file: 'build/index.js',
       format: 'umd',
-      name: "{{packageName}}",
+      name: '{{packageName}}',
       globals: {
         react: 'React',
         'prop-types': 'PropTypes',
@@ -23,7 +24,7 @@ const config = {
     {
       file: 'build/index.cjs.js',
       format: 'cjs',
-      name: "{{packageName}}",
+      name: '{{packageName}}',
     },
     {
       file: 'build/index.esm.js',
@@ -42,6 +43,8 @@ const config = {
     localResolve(),
     resolve(),
     commonjs(),
+    minify(),
+    uglify(),
     filesize(),
   ],
 };
