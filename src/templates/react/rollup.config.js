@@ -15,7 +15,7 @@ const config = {
     {
       file: 'build/index.js',
       format: 'umd',
-      name: "{{packageName}}",
+      name: '{{packageName}}',
       globals: {
         react: 'React',
         'prop-types': 'PropTypes',
@@ -24,7 +24,7 @@ const config = {
     {
       file: 'build/index.cjs.js',
       format: 'cjs',
-      name: "{{packageName}}",
+      name: '{{packageName}}',
     },
     {
       file: 'build/index.esm.js',
