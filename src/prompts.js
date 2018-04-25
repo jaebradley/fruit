@@ -2,6 +2,7 @@ import inquirer from 'inquirer';
 import emailValidator from 'email-validator';
 import validateNpmPackageName from 'validate-npm-package-name';
 import isSemver from 'is-semver';
+import chalk from 'chalk';
 
 import isGitHubUsernameValid from './isGitHubUsernameValid';
 import {
@@ -13,7 +14,7 @@ const prompts = async () => (
   inquirer.prompt([
     {
       name: 'packageType',
-      message: 'Select a package type',
+      message: chalk.bold.magentaBright('📦  Select a package type'),
       type: 'list',
       choices: [
         PACKAGE_TYPES.NODE,
@@ -22,7 +23,7 @@ const prompts = async () => (
     },
     {
       name: 'packageFeatures',
-      message: 'Select package Features',
+      message: chalk.bold.cyanBright('✅  Select package features'),
       type: 'checkbox',
       choices: [
         PACKAGE_FEATURES.COMMITLINT,
@@ -31,44 +32,44 @@ const prompts = async () => (
     },
     {
       name: 'packageName',
-      message: 'Input a package name',
+      message: chalk.bold.greenBright('📛  Input a package name'),
       type: 'input',
-      validate: packageName => validateNpmPackageName(packageName).validForNewPackages || `${packageName} is an invalid package name`,
+      validate: packageName => validateNpmPackageName(packageName).validForNewPackages || chalk.bold.redBright(`😞  ${packageName} is an invalid package name`),
     },
     {
       name: 'packageDescription',
-      message: 'Input a package description',
+      message: chalk.bold.redBright('🏷️  Input a package description'),
       type: 'input',
       validate: answer => answer && answer.length > 0,
     },
     {
       name: 'packageVersion',
-      message: 'Input an initial package version',
+      message: chalk.bold.yellowBright('🌱  Input an initial package version'),
       type: 'input',
-      validate: answer => isSemver(answer) || `${answer} is an invalid package version`,
+      validate: answer => isSemver(answer) || chalk.bold.redBright(`😞  ${answer} is an invalid package version`),
     },
     {
       name: 'targetDirectory',
-      message: 'Input the relative package location',
+      message: chalk.bold.magentaBright('📍  Input the relative package location'),
       type: 'input',
       validate: answer => answer && answer.length > 0,
     },
     {
       name: 'authorEmailAddress',
-      message: 'Input your email address',
+      message: chalk.bold.cyanBright('📥  Input your email address'),
       type: 'input',
-      validate: emailAddress => emailValidator.validate(emailAddress) || `${emailAddress} is an invalid email address`,
+      validate: emailAddress => emailValidator.validate(emailAddress) || chalk.bold.redBright(`😞  ${emailAddress} is an invalid email address`),
     },
     {
       name: 'gitHubUsername',
-      message: 'Input your GitHub username',
+      message: chalk.bold.greenBright('👤  Input your GitHub username'),
       type: 'input',
       validate: async (username) => {
         if (await isGitHubUsernameValid(username)) {
           return true;
         }
 
-        return `${username} is an invalid GitHub username`;
+        return chalk.bold.redBright(`😞  ${username} is an invalid GitHub username`);
       },
     },
   ])

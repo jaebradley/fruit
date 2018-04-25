@@ -62,6 +62,7 @@
   "dependencies": {
     "@babel/runtime": "^7.0.0-beta.42",
     "@octokit/rest": "^15.2.6",
+    "chalk": "^2.4.0",
     "child-process-promise": "^2.2.1",
     "commander": "^2.15.1",
     "deepmerge": "^2.1.0",
