@@ -1,10 +1,22 @@
-# 🥝  🍋  🍐  🍓  🍊  🍍  🍰  fruit 🍒  🍈  🍇  🍉  🍏  🍎  🍌
+<p align="center">
+ <a href="#" target="_blank" rel="noopener noreferrer">
+  <img width="550" src="https://imgur.com/OARS9M5.png" alt="fruit">
+ </a>
+</p>
+<p align="center">Build your <b><a href="https://rollupjs.org/guide">rollup.js</a></b> boilerplate in seconds.<sup><a href="#build-in-seconds-footnote">1</a></sup></p>
+<p align="center">
+ <a href="https://travis-ci.org/jaebradley/fruit">
+  <img src="https://travis-ci.org/jaebradley/fruit.svg?branch=master" alt="build-status"></img>
+ </a>
+ <a href="https://www.npmjs.com/package/@jaebradley/fruit">
+  <img src="https://img.shields.io/npm/v/@jaebradley/fruit.svg" alt="npm-version"></img>
+ </a>
+ <a href="https://www.npmjs.com/package/@jaebradley/fruit">
+  <img src="https://img.shields.io/npm/dt/@jaebradley/fruit.svg" alt="npm-total-downloads"></img>
+ </a>
+</p>
 
-[![Build Status](https://travis-ci.org/jaebradley/fruit.svg?branch=master)](https://travis-ci.org/jaebradley/fruit)
-[![npm](https://img.shields.io/npm/dt/@jaebradley/fruit.svg)](https://www.npmjs.com/package/@jaebradley/fruit)
-[![npm](https://img.shields.io/npm/v/@jaebradley/fruit.svg)](https://www.npmjs.com/package/@jaebradley/fruit)
-
-Build your [`rollup.js`](https://rollupjs.org/guide) library boilerplate in seconds.<sup>[1](#build-in-seconds-footnote)</sup>
+<p align="center">🥝  🍋  🍐  🍓  🍊  🍍  🍰  🍒  🍈  🍇  🍉  🍏  🍎  🍌</p>
 
 * [Introduction](#introduction)
 * [Installation](#installation)
@@ -17,7 +29,7 @@ Build your [`rollup.js`](https://rollupjs.org/guide) library boilerplate in seco
 
 ## Introduction
 
-There are two main libraries used to bundle JavaScript - [`rollup`](https://rollupjs.org/guide) and [`webpack`](https://webpack.js.org).
+Two of the most-popular libraries used to bundle JavaScript are [`rollup`](https://rollupjs.org/guide) and [`webpack`](https://webpack.js.org).
 
 [The general consensus](https://medium.com/webpack/webpack-and-rollup-the-same-but-different-a41ad427058c) is that `rollup` should be used for building libraries and `webpack` should be used for building applications.
 
@@ -196,4 +208,4 @@ along with the following `npm` `scripts`
 
 ### Footnotes
 
-<a name="build-in-seconds-footnote"><sup>1</sup></a> Ok, maybe more like "many seconds" - there's a lot to install!
+<a name="build-in-seconds-footnote"><sup>1</sup></a> Ok, maybe more like "many seconds" (☕ time?)
