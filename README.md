@@ -1,6 +1,6 @@
 <p align="center">
  <a href="#" target="_blank" rel="noopener noreferrer">
-  <img width="550" src="https://imgur.com/OARS9M5.png" alt="fruit">
+  <img width="550" src="https://imgur.com/ZdlPAqI.png" alt="fruit">
  </a>
 </p>
 <p align="center">Build your <b><a href="https://rollupjs.org/guide">rollup.js</a></b> boilerplate in seconds.<sup><a href="#build-in-seconds-footnote">1</a></sup></p>
