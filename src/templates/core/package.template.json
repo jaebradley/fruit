@@ -29,12 +29,12 @@
   "readme": "https://github.com/{{gitHubUsername}}/{{packageName}}#readme",
   "dependencies": {},
   "devDependencies": {
-    "@babel/cli": "^7.0.0-beta.42",
-    "@babel/core": "^7.0.0-beta.42",
-    "@babel/preset-env": "^7.0.0-beta.42",
+    "@babel/cli": "^7.0.0-beta.54",
+    "@babel/core": "^7.0.0-beta.54",
+    "@babel/preset-env": "^7.0.0-beta.54",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "22.4.3",
-    "codecov": "^3.0.0",
+    "codecov": "^3.0.2",
     "eslint": "^4.19.1",
     "jest": "^22.4.3",
     "rollup": "^0.58.1",
@@ -44,7 +44,7 @@
     "rollup-plugin-filesize": "^1.5.0",
     "rollup-plugin-local-resolve": "^1.0.7",
     "rollup-plugin-node-resolve": "^3.3.0",
-    "rollup-plugin-uglify":"^3.0.0"
+    "rollup-plugin-terser":"^1.0.1"
   },
   "jest": {
     "testPathIgnorePatterns": [
