@@ -2,6 +2,9 @@
   "name": "{{packageName}}",
   "version": "{{packageVersion}}",
   "description": "{{packageDescription}}",
+  "publishConfig": {
+    "access": "public"
+  },
   "author": "{{packageAuthor}}",
   "main": "build/index.cjs.js",
   "module": "build/index.esm.js",
