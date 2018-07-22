@@ -13,7 +13,7 @@
     "build": "rollup -c",
     "build:prod": "BABEL_ENV=production npm run build",
     "codecov": "codecov",
-    "test": "BABEL_ENV=test jest src/ --coverage --no-cache",
+    "test": "BABEL_ENV=test jest src/ --no-cache",
     "prepare": "npm run build:prod"
   },
   "repository": {
@@ -47,6 +47,7 @@
     "rollup-plugin-terser":"^1.0.1"
   },
   "jest": {
+    "collectCoverage": true,
     "testPathIgnorePatterns": [
       "<rootDir>/build/",
       "<rootDir>/node_modules/"
