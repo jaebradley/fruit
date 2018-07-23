@@ -6,10 +6,6 @@
           "@babel/preset-env",
           { "modules": "umd" }
         ]
-      ],
-      "plugins": [
-        "@babel/transform-runtime",
-        "@babel/transform-async-to-generator"
       ]
     },
     "production": {
