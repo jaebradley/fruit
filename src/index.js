@@ -11,4 +11,3 @@ program.version(pkg.version)
   .parse(process.argv);
 
 executor();
-
