@@ -47,7 +47,12 @@ const config = {
     postcss({ extract: true, plugins: [autoprefixer] }),
     babel({ exclude: 'node_modules/**' }),
     localResolve(),
-    resolve(),
+    resolve({
+      extensions: [
+        '.js',
+        '.jsx',
+      ],
+    }),
     commonjs(),
     minify(),
     terser(),
