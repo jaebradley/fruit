@@ -9,33 +9,39 @@ import localResolve from 'rollup-plugin-local-resolve';
 import { terser } from 'rollup-plugin-terser';
 import minify from 'rollup-plugin-babel-minify';
 
+import pkg from '../package.json';
+
+const globals = [
+  'react',
+  'react-dom',
+  'prop-types',
+];
+
+const external = globals;
+
 const config = {
   input: 'src/index.js',
   output: [
     {
-      file: 'build/index.js',
+      file: pkg.browser,
       format: 'umd',
       name: '{{packageName}}',
-      globals: {
-        react: 'React',
-        'prop-types': 'PropTypes',
-      },
+      globals,
     },
     {
-      file: 'build/index.cjs.js',
+      file: pkg.main,
       format: 'cjs',
       name: '{{packageName}}',
+      globals,
     },
     {
-      file: 'build/index.esm.js',
+      file: pkg.module,
       format: 'es',
+      name: '{{packageName}}',
+      globals,
     },
   ],
-  external: [
-    'react',
-    'react-dom',
-    'prop-types',
-  ],
+  external,
   plugins: [
     peerDepsExternal(),
     postcss({ extract: true, plugins: [autoprefixer] }),
