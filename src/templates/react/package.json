@@ -52,11 +52,16 @@
       "\\.(css|scss)$": "identity-obj-proxy"
     },
     "collectCoverageFrom": [
-      "src/**/*.{js,jsx}"
+      "src/**/*.{js,jsx}",
+      "!<rootDir>/src/setupTest.js"
     ],
     "coveragePathIgnorePatterns": [
       "/node_modules/",
-      "(.stories)\\.(jsx)$"
+      "(.stories)\\.(jsx)$",
+      "<rootDir>/src/setupTest.js"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/src/setupTest.js"
     ]
   }
 }

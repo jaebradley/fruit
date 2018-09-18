@@ -8,22 +8,25 @@ import globals from 'rollup-plugin-node-globals';
 import builtins from 'rollup-plugin-node-builtins';
 import { terser } from 'rollup-plugin-terser';
 
+import pkg from '../package.json';
+
 const config = {
   input: 'src/index.js',
   output: [
     {
-      file: 'build/index.js',
+      file: pkg.browser,
       format: 'umd',
       name: '{{packageName}}',
     },
     {
-      file: 'build/index.cjs.js',
+      file: pkg.main,
       format: 'cjs',
       name: '{{packageName}}',
     },
     {
-      file: 'build/index.esm.js',
+      file: pkg.module,
       format: 'es',
+      name: '{{packageName}}',
     },
   ],
   plugins: [
