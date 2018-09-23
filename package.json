@@ -58,6 +58,7 @@
     "travis-deploy-once": "^5.0.2"
   },
   "dependencies": {
+    "@alexlafroscia/yaml-merge": "^1.0.3",
     "@babel/runtime": "^7.0.0-rc.1",
     "@octokit/rest": "^15.9.5",
     "chalk": "^2.4.1",

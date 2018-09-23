@@ -1,0 +1,7 @@
+jobs:
+  include:
+    - stage: test
+    - stage: deploy
+      script:
+        - npm run deploy
+        - npm run deploy-storybook-ci

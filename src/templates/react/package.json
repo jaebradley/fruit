@@ -2,6 +2,7 @@
   "style": "build/index.css",
   "scripts": {
     "deploy": "",
+    "deploy-storybook-ci": "storybook-to-ghpages --ci",
     "lint": "eslint --ext .js,.jsx .",
     "storybook": "start-storybook -p 6006"
   },
@@ -16,6 +17,7 @@
     "@storybook/addon-options": "^3.4.1",
     "@storybook/channels": "^3.4.1",
     "@storybook/react": "^3.4.1",
+    "@storybook/storybook-deployer": "^2.3.0",
     "autoprefixer": "^8.2.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.9.0",

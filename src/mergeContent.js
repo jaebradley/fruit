@@ -1,16 +1,24 @@
-import isJSON from 'is-json';
 import deepMerge from 'deepmerge';
+import yamlMerge from '@alexlafroscia/yaml-merge';
 
-const mergeContent = ({ originalContent, additionalContent }) => {
-  if (isJSON(additionalContent) && isJSON(originalContent)) {
-    const mergedContent = deepMerge(
-      JSON.parse(originalContent),
-      JSON.parse(additionalContent),
-    );
-    return JSON.stringify(mergedContent, null, 2);
-  }
+const mergeContent = ({ originalContent, additionalContent }) => `${originalContent}\n${additionalContent}`.trimLeft();
 
-  return `${originalContent}\n${additionalContent}`.trimLeft();
+const mergeYAMLContent = ({ originalYAMLFileLocation, additionalYAMLFileLocation }) => yamlMerge(
+  originalYAMLFileLocation,
+  additionalYAMLFileLocation,
+);
+
+const mergeJSONContent = ({ originalContent, additionalContent }) => JSON.stringify(
+  deepMerge(
+    JSON.parse(originalContent),
+    JSON.parse(additionalContent),
+  ),
+  null,
+  2,
+);
+
+export {
+  mergeYAMLContent,
+  mergeJSONContent,
+  mergeContent,
 };
-
-export default mergeContent;
