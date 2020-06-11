@@ -73,7 +73,7 @@
     "is-semver": "^1.0.8",
     "mustache": "^3.0.3",
     "normalize-package-data": "^2.4.0",
-    "sort-package-json": "^1.15.0",
+    "sort-package-json": "^1.42.2",
     "untildify": "^4.0.0",
     "validate-npm-package-name": "^3.0.0"
   },
