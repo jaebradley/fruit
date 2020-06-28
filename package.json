@@ -63,7 +63,7 @@
     "chalk": "^2.4.1",
     "child-process-promise": "^2.2.1",
     "commander": "^3.0.1",
-    "deepmerge": "^4.0.0",
+    "deepmerge": "^4.2.2",
     "email-validator": "^2.0.4",
     "fs-extra": "^8.1.0",
     "globby": "^10.0.1",
