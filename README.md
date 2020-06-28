@@ -5,8 +5,8 @@
 </p>
 <p align="center">Build your <b><a href="https://rollupjs.org/guide">rollup.js</a></b> boilerplate in seconds.<sup><a href="#build-in-seconds-footnote">1</a></sup></p>
 <p align="center">
- <a href="https://travis-ci.org/jaebradley/fruit">
-  <img src="https://travis-ci.org/jaebradley/fruit.svg?branch=master" alt="build-status"></img>
+ <a href="https://github.com/jaebradley/fruit/actions?query=workflow%3AFruit">
+  <img src="https://github.com/jaebradley/fruit/workflows/Fruit/badge.svg" alt="build-status"></img>
  </a>
  <a href="https://www.npmjs.com/package/@jaebradley/fruit">
   <img src="https://img.shields.io/npm/v/@jaebradley/fruit.svg" alt="npm-version"></img>
