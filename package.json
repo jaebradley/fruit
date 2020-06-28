@@ -59,7 +59,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.0.0-rc.1",
-    "@octokit/rest": "^16.28.9",
+    "@octokit/rest": "^16.43.1",
     "chalk": "^2.4.1",
     "child-process-promise": "^2.2.1",
     "commander": "^3.0.1",
