@@ -70,7 +70,7 @@
     "inquirer": "^7.1.0",
     "is-json": "^2.0.1",
     "is-online": "^8.4.0",
-    "is-semver": "^1.0.8",
+    "is-semver": "^1.0.9",
     "mustache": "^3.2.1",
     "normalize-package-data": "^2.5.0",
     "sort-package-json": "^1.44.0",
