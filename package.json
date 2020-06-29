@@ -69,7 +69,7 @@
     "globby": "^10.0.1",
     "inquirer": "^7.1.0",
     "is-json": "^2.0.1",
-    "is-online": "^8.2.0",
+    "is-online": "^8.4.0",
     "is-semver": "^1.0.8",
     "mustache": "^3.0.3",
     "normalize-package-data": "^2.4.0",
