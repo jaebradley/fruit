@@ -58,7 +58,7 @@
     "travis-deploy-once": "^5.0.2"
   },
   "dependencies": {
-    "@babel/runtime": "^7.10.3",
+    "@babel/runtime": "^7.10.4",
     "@octokit/rest": "^16.43.2",
     "chalk": "^2.4.2",
     "child-process-promise": "^2.2.1",
