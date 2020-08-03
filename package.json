@@ -59,7 +59,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.10.3",
-    "@octokit/rest": "^16.43.1",
+    "@octokit/rest": "^16.43.2",
     "chalk": "^2.4.2",
     "child-process-promise": "^2.2.1",
     "commander": "^3.0.2",
@@ -67,7 +67,7 @@
     "email-validator": "^2.0.4",
     "fs-extra": "^8.1.0",
     "globby": "^10.0.2",
-    "inquirer": "^7.2.0",
+    "inquirer": "^7.3.0",
     "is-json": "^2.0.1",
     "is-online": "^8.4.0",
     "is-semver": "^1.0.9",
