@@ -67,7 +67,7 @@
     "email-validator": "^2.0.4",
     "fs-extra": "^8.1.0",
     "globby": "^10.0.2",
-    "inquirer": "^7.3.2",
+    "inquirer": "^7.3.3",
     "is-json": "^2.0.1",
     "is-online": "^8.4.0",
     "is-semver": "^1.0.9",
