@@ -13,10 +13,11 @@
     "deploy": "npm run travis-deploy-once 'npm run semantic-release'",
     "lint": "eslint --ext .js .",
     "test": "jest src/ --coverage --passWithNoTests",
-    "prepare": "npm run build",
+    "prepare": "npm run snyk-protect && npm run build",
     "semantic-commit": "commit",
     "semantic-release": "semantic-release",
-    "travis-deploy-once": "travis-deploy-once"
+    "travis-deploy-once": "travis-deploy-once",
+    "snyk-protect": "snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -75,7 +76,8 @@
     "normalize-package-data": "^2.5.0",
     "sort-package-json": "^1.44.0",
     "untildify": "^4.0.0",
-    "validate-npm-package-name": "^3.0.0"
+    "validate-npm-package-name": "^3.0.0",
+    "@snyk/protect": "latest"
   },
   "jest": {
     "testPathIgnorePatterns": [
@@ -83,5 +85,6 @@
       "<rootDir>/node_modules/",
       "<rootDir>/src/templates/"
     ]
-  }
+  },
+  "snyk": true
 }
